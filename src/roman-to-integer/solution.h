@@ -3,7 +3,7 @@
 class Solution {
 public:
 
-    static int romanToInt(std::string s) {
+    static int romanToInt(const std::string& s) {
         int result{0}, value{0}, rightSymbolValue{0};
         if (!s.empty()) {
             rightSymbolValue = romanFigureToInt(s.back());
@@ -19,7 +19,7 @@ public:
 
 private:
 
-    static int romanFigureToInt(char symbol) {
+    static int romanFigureToInt(const char symbol) {
         switch (symbol) {
             case 'I': return 1;
             case 'V': return 5;
