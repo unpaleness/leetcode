@@ -3,7 +3,7 @@
 #include "solution.h"
 
 void outputSolution(const std::vector<std::vector<int32_t>>& solution) {
-    std::cout << '[';
+    std::cout << "\033[48;5;148m" << '[';
     for (int32_t j = 0; j < solution.size(); ++j) {
         const auto& s = solution[j];
         if (j < 0) {
@@ -18,7 +18,7 @@ void outputSolution(const std::vector<std::vector<int32_t>>& solution) {
         }
         std::cout << ']';
     }
-    std::cout << ']' << std::endl;
+    std::cout << ']' << "\033[0m" << std::endl;
 }
 
 int main() {
