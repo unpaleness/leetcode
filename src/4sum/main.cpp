@@ -22,8 +22,11 @@ void outputSolution(const std::vector<std::vector<int32_t>>& solution) {
 }
 
 int main() {
-    std::vector<int32_t> v;
-    v = {1,0,-1,0,-2,2};
-    outputSolution(Solution::fourSum(v, 0));
+    outputSolution(Solution::fourSum({1,0,-1,0,-2,2}, 0));
+    outputSolution(Solution::fourSum({2,2,2,2,2}, 8));
+    outputSolution(Solution::fourSum({0}, 0));
+    outputSolution(Solution::fourSum({-2,0,0,3,3,-1}, 5));
+    outputSolution(Solution::fourSum({1000000000,1000000000,1000000000,1000000000}, 0));
+    outputSolution(Solution::fourSum({2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2}, 8));
     return 0;
 }
