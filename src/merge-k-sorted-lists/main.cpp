@@ -44,7 +44,18 @@ void checkSolution(const std::vector<std::vector<int32_t>>& lists) {
     }
     std::cout << "]\n";
 
-    Solution::mergeKLists(starts);
+    ListNode* result = Solution::mergeKLists(starts);
+    std::cout << '[';
+    size_t i = 0;
+    while (result) {
+        if (i > 0) {
+            std::cout << ',';
+        }
+        std::cout << result->val;
+        result = result->next;
+        ++i;
+    }
+    std::cout << "]\n";
 }
 
 int main() {
