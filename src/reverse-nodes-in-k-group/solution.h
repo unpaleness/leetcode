@@ -14,25 +14,6 @@ public:
         if (k < 2) {
             return head;
         }
-        // if (k == 2) {
-        //     ListNode* it = head;
-        //     ListNode* prev = nullptr;
-        //     ListNode* result = it && it->next ? it->next : it;
-        //     while (it) {
-        //         if (it->next) {
-        //             if (prev) {
-        //                 prev->next = it->next;
-        //             }
-        //             ListNode* nextNext = it->next->next;
-        //             it->next->next = it;
-        //             it->next = nextNext;
-        //         }
-        //         prev = it;
-        //         it = it->next;
-        //     }
-        //     return result;
-        // }
-        // k > 2
         ListNode* it = head;
         ListNode* prev = nullptr;
         ListNode* result = head;
@@ -57,6 +38,8 @@ public:
                 }
                 if (prev) {
                     prev->next = end;
+                } else {
+                    result = end;
                 }
             }
             prev = begin;
